@@ -185,7 +185,10 @@ function M.send_request()
         end, validate_method)
     end, validate_url)
 end
-vim.api.nvim_create_user_command("Mailwoman", M.send_request, {})
-vim.api.nvim_set_keymap('n', '<leader>mw', ':Mailwoman<CR>', { noremap = true, silent = true })
+
+function M.setup()
+    vim.api.nvim_create_user_command("Mailwoman", M.send_request, {})
+    vim.api.nvim_set_keymap('n', '<leader>mw', ':Mailwoman<CR>', { noremap = true, silent = true })
+end
 
 return M
