@@ -1,4 +1,4 @@
-# nvim-solana
+# Mailwoman
 This is a Neovim plugin to send curl requests right from an UI and see the output.
 
 # Installation
