@@ -911,9 +911,7 @@ function M.view_history()
 end
 
 -- Define a command to open the Mailwoman UI
-vim.api.nvim_create_user_command("Mailwoman", function()
-  require("mailwoman").open_ui()
-end, {})
+vim.keymap.set("n", "<leader>mw", ":lua require('mailwoman').open_ui()<CR>", { noremap = true, silent = true })
 
 -- Export the module
 return M
